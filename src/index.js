@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Cocktails from './pages/Cocktails';
 import NotFound from './pages/NotFound';
 import CocktailDetail from './pages/CocktailDetail';
+import SearchHeader from './components/SearchHeader';
 
 
 
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFound />,
     children: [
-      { index: true, element: <Cocktails /> },
+      { index: true, element: <SearchHeader /> },
       { path: 'cocktails', element: <Cocktails /> },
       { path: 'cocktails/:keyword', element: <Cocktails /> },
       { path: 'cocktails/watch/:drinkId', element:<CocktailDetail />},

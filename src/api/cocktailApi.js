@@ -14,25 +14,12 @@ export default class CocktailApi {
 
     async #searchByKeyword(keyword) {
         return this.httpClient
-            .get('search.php?s=' +keyword, {
-                params: {
-                    part: 'snippet',
-                    maxResults: 25,
-                    type: 'video',
-                    q: keyword
-                },
-            })
+            .get('search.php?s=' + keyword)
             .then((res) => res.data.drinks);
     }
     async #mostPopular() {
         return this.httpClient
-            .get('random.php', {
-                params: {
-                    part: 'snippet',
-                    maxResults: 25,
-                    chart: 'mostPopular'
-                },
-            })
+            .get('random.php')
             .then((res) => res.data.drinks);
     }
 

@@ -20,7 +20,6 @@ export default function Cocktails() {
 
   return (
     <>
-      <div>Cocktails {keyword ? `${keyword}` : `⭐`}</div>
       {isLoading && <p>Loading~~~</p>}
       {error && <p>error</p>}
       {cocktails && (
