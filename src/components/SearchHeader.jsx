@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import styles from "./SearchHeader.module.css";
 
@@ -23,17 +23,17 @@ export default function SearchHeader({ cocktail }) {
     <>
       <header className="w-full text-2xl p4 mb-4">
         <container className={styles.container}>
-          {/* <img
+          <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIcdHs_d_nVrhJfqCCKT1e7_px7EOClfeIKw&usqp=CAU"
             alt="#"
             className={styles.img}
-          /> */}
-          <section className="text-7xl text-bold ml-40 mt-20 pb-15">
-            <div>One cocktail,</div>
-            <div>Two</div>
-            <div>cocktail Cool,</div>
-            <div>cocktail</div>
-            <div>Floor</div>
+          />
+          <section className={styles.div}>
+            <div className={styles.first}>One cocktail,</div>
+            <div className={styles.second}>Two</div>
+            <div className={styles.third}>cocktail Cool,</div>
+            <div className={styles.fourth}>cocktail</div>
+            <div className={styles.fifth}>Floor</div>
           </section>
         </container>
 
@@ -43,12 +43,12 @@ export default function SearchHeader({ cocktail }) {
         >
           <input
             type="text"
-            placeholder="칵테일을 입력하세요:)"
+            placeholder="Search your favorite Cocktail :)"
             value={text}
             onChange={handleChange}
-            className="w-3/12 p-2 placeholder-gray-500 outline-none"
+            className={styles.input}
           />
-          <button className="bg-zinc-600 px-4 text-white">
+          <button className={styles.button}>
             <BsSearch />
           </button>
         </form>

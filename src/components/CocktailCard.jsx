@@ -1,14 +1,12 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import styles from "./CocktailCard.module.css";
 
 export default function CocktailCard({ cocktail }) {
   const navigate = useNavigate();
   return (
-    <>
-      <Link to={"/"}>
-        <h1 className="flex text-bold text-4xl ml-5">Cocktail</h1>
-      </Link>
-      <li
+    <section className={styles.section}>
+      <li className={styles.li}
         onClick={() => {
           navigate(`/cocktails/watch/${cocktail.idDrink}`, {
             state: { cocktail: cocktail },
@@ -16,8 +14,8 @@ export default function CocktailCard({ cocktail }) {
         }}
       >
         <img src={cocktail.strDrinkThumb} alt="#" />
-        <div>{cocktail.strDrink}</div>
+        <div className={styles.title}>{cocktail.strDrink}</div>
       </li>
-    </>
+    </section>
   );
 }
