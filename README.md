@@ -1,5 +1,5 @@
 # Cocktail
-:point_right: Cocktail Api를 불러와 원하는 칵테일을 검색하고 원하는 칵테일을 선택하여 아이템을 확인할 수 있는 앱
+:point_right: Cocktail Api를 불러와 유저별로 원하는 칵테일을 검색하고 아이템을 확인할 수 있는 앱
 
 :clapper: 데모앱: [Cocktail](https://earnest-dasik-7a5f4d.netlify.app/)
 
